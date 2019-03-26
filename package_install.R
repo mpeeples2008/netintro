@@ -1,0 +1,7 @@
+install.packages('statnet')
+install.packages('tnet')
+install.packages('vegan')
+install.packages('FastKNN')
+install.packages('kableExtra')
+install.packages('ggraph')
+install.packages('GGally')
