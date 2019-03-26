@@ -69,7 +69,9 @@ For the purposes of this workshop, we will rely on a few pre-existing R packages
 
 For the purposes of this workshop we will rely on several existing packages. Copy the line below into the console or follow the instructions to install using the packages tab:
 
-install.packages('statnet','tnet','vegan','FastKNN','kableExtra','ggraph','GGally')
+```{r eval=FALSE}
+install.packages(c('statnet','tnet','vegan','FastKNN','kableExtra','ggraph','GGally'))
+```
 
 Once you have installed these packages we use the library console command to initialize our packages. 
 
@@ -119,7 +121,9 @@ ceramicP <- co.p(ceramic)
 
 # display the results
 kable(ceramicP) %>%
+  
   kable_styling() %>%
+  
   scroll_box(width = "100%", height = "300px")
 ```
 
@@ -141,7 +145,9 @@ ceramicBR <- (2-as.matrix(vegdist(ceramic.p, method='manhattan')))/2
 
 # display the results
 kable(ceramicBR) %>%
+  
   kable_styling() %>%
+  
   scroll_box(width = "100%", height = "300px")
 ```
 
@@ -173,7 +179,9 @@ ceramicX01 <- ceramicX/max(ceramicX)
 
 # display the results
 kable(ceramicX01) %>%
+  
   kable_styling() %>%
+  
   scroll_box(width = "100%", height = "300px")
 ```
 
@@ -205,7 +213,9 @@ colnames(dist.knn) <- row.names(ceramic.attr)
 
 # display the results
 kable(dist.knn) %>%
+  
   kable_styling() %>%
+  
   scroll_box(width = "100%", height = "300px")
 ```
 
